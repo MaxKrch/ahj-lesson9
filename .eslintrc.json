@@ -19,5 +19,12 @@
       "extends": ["plugin:jest/recommended"],
       "rules": { "jest/prefer-expect-assertions": "off" }
     }
+  ],
+  "ignorePatterns": [
+    "dist/*", 
+    "coverage/*",
+    "doc/*",
+    "webpack.*.js",
+    "jest.*.js"
   ]
 }
