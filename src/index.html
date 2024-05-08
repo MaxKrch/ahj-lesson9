@@ -6,6 +6,99 @@
 	<title>Document</title>
 </head>
 <body>
+	<header class="main-container header">
+		<h1 class="main-title">
+			Test Page
+		</h1>
+	</header>
 	
+	<main class="main-container">
+		<section class="section-container">
+			<h2 class="section-title">
+				Show Collapser
+			</h2>
+
+			<div class="collapser-block">
+				<button class="button collapse-button" data-id="collapseButton">
+					Collapse
+				</button>
+							
+				<div class="text-block" data-id="collapseContainer">
+					<div class="text" data-id="collapseField" data-show="true">
+						<p class="text-p">
+							Lorem, ipsum dolor sit amet consectetur.
+						</p>
+						<p class="text-p">
+							Lorem, ipsum, dolor.
+						</p>
+						<p class="text-p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum omnis, distinctio facere.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section-container">
+			<h2 class="section-title">
+				Show Toggler
+			</h2>
+			
+			<div class="toggler-block">
+				<div class="chat-block hidden-item">
+					<h3 class="block-title chat-title">
+						Напишите нам
+					</h3>
+					
+					<textarea name="ticket-text" id="ticket" class="chat-text" placeholder="Ваш вопрос"></textarea>
+					
+					<div class="chat-error">
+					</div>
+					
+					<button class="button chat-button">
+						Отправить
+					</button>
+					
+					<div class="chat-close">
+						&#10006;
+					</div>
+				</div>
+
+				<div class="button-chat-block">
+					<div class="button-div button-chat-show"></div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section-container">
+			<h2 class="section-title">
+				Show Liker
+			</h2>
+
+			<div class="liker-block">
+				<div class="message">
+					<div class="message-title">
+						Lorem, ipsum dolor.
+					</div>
+					
+					<div class="message-text">
+						<p class="message-text-p">
+							Lorem ipsum dolor sit amet.
+						</p>
+						<p class="message-text-p">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium.
+						</p>
+					</div>
+				</div>
+
+				<button class="button liker-button">
+					Like
+				</button>
+			</div>
+			
+			<div class="heart">
+			</div>
+		</section>
+	</main>
 </body>
 </html>
