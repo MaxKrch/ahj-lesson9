@@ -45,27 +45,34 @@
 			</h2>
 			
 			<div class="toggler-block">
-				<div class="chat-block hidden-item">
+				<form class="chat-block chat-block_temp hidden-item" data-chat="form">
 					<h3 class="block-title chat-title">
 						Напишите нам
 					</h3>
 					
-					<textarea name="ticket-text" id="ticket" class="chat-text" placeholder="Ваш вопрос"></textarea>
+					<textarea name="ticket-text" id="ticket" class="chat-text" placeholder="Ваш вопрос" data-chat="text"></textarea>
 					
-					<div class="chat-error">
+					<div class="chat-error" data-mess="error">
 					</div>
 					
-					<button class="button chat-button">
+					<input type="hidden" class="chat-input" name="user" value="Max" data-chat="name">
+
+					<button class="button chat-button" data-ui="submit">
 						Отправить
 					</button>
 					
-					<div class="chat-close">
+					<div class="chat-close" data-ui="close">
 						&#10006;
 					</div>
-				</div>
+					<div class="chat-success hidden-item" data-mess="success">
+						<!-- <div class="chat-success-text"> -->
+							Спасибо за обращение!
+						<!-- </div> -->
+					</div>
+				</form>
 
 				<div class="button-chat-block">
-					<div class="button-div button-chat-show"></div>
+					<div class="button-div button-chat-show" data-ui="toggler"></div>
 				</div>
 			</div>
 		</section>

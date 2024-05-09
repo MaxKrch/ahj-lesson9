@@ -83,12 +83,12 @@ export default class Collapser {
 	actionCollapser() {
 		const { action, start, heightField, heightContainer, pixelsToFrame } = this.dataAnimation;
 		const passTime = (performance.now() - start);
-		const incrPixels = Math.floor(passTime * pixelsToFrame);
+		const incrPixels = passTime * pixelsToFrame;
 		let height;
 		let cont = true;
 
 		if(action === 'show') {
-			const newHeight = heightContainer + incrPixels;
+			const newHeight = Math.floor(heightContainer + incrPixels);
 			if(newHeight >= heightField) {
 				height = heightField;
 				cont = false;
@@ -98,7 +98,7 @@ export default class Collapser {
 		}
 
 		if(action === 'hide') {
-			const newHeight = heightContainer - incrPixels;
+			const newHeight = Math.floor(heightContainer - incrPixels);
 			if(newHeight <= 0) {
 				height = 0;
 				cont = false;
