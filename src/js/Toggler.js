@@ -118,7 +118,7 @@ export default class Toggler {
 
 		this.chat.textarea.addEventListener('keypress', event => this.eventListeners.textarea.keypress(event));
 
-		this.page.addEventListener('click', event =>	this.eventListeners.page.click(event));
+		this.page.addEventListener('mousedown', event =>	this.eventListeners.page.click(event));
 	}
 
 	byClickShowChat(event) {
@@ -187,6 +187,7 @@ export default class Toggler {
 	startHideChat() {
 		this.chat.form.classList.add('chat-block_temp')
 		this.state.chat = false;
+		this.chat.textarea.style.height = '150px';
 	}
 
 	endHideChat() {
@@ -197,6 +198,7 @@ export default class Toggler {
 		this.chat.textarea.value = '';
 		this.chat.textarea.selectionEnd = 0;
 		this.chat.textarea.blur();
+		this.chat.textarea.style.height = '150px';
 	}
 
 	showTogglerBtn() {
